@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,49 @@
     <link rel="stylesheet" href="style.css">
     <title>Alerta Auto Care</title>
 </head>
+
 <body>
     <div class="container">
         <header>
             <nav>
-                <ul>
-                    <li><span>Características</span></li>
-                    <li><span>Preços</span></li>
-                    <li><span>Modelos</span></li>
-                    <li><span>Blog</span></li>
-                    <li><span>Contato</span></li>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">Características</a></li>
+                    <li><a href="#">Preços</a></li>
+                    <li><a href="#">Modelos</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
-                <div>
-                    <span>Iniciar Sessão</span>
-                    <span>Registre-se</span>
+                <div class="auth">
+                    <a href="#">Iniciar Sessão</a>
+                    <a href="#">Registre-se</a>
                 </div>
             </nav>
         </header>
 
         <main>
-            <section>
-                <h1>Aplicativo Alerta Auto Care</h1>
-                <p>Conduza tarefas de manutenção de veículos e relate problemas identificados usando o <b>aplicativo de vistorias veiculares!</b> Administre as verificações de vistorias de forma padronizada entre todos os seus veículos. A aplicação de manutenção de veículos ajuda-o a rastrear as operações em tempo real. Você receberá uma notificação instantânea quando as tarefas forem concluídas. Melhore a gestão de seus processos comerciais e também economize tempo nas tarefas administrativas.</p>
-                <img src="style/snapinspect-web-ios-android.png" alt="sistemas compatíveis">
+            <section class="intro">
+                <div class="content">
+                    <h1>Aplicativo Alerta Auto Care</h1>
+                    <p>Conduza tarefas de manutenção de veículos e relate problemas identificados usando o aplicativo de vistorias veiculares! Administre as verificações de vistorias de forma padronizada entre todos os seus veículos. A aplicação de manutenção de veículos ajuda-o a rastrear as operações em tempo real. Você receberá uma notificação instantânea quando as tarefas forem concluídas. Melhore a gestão de seus processos comerciais e também economize tempo nas tarefas administrativas.</p>
+                </div>
+                <div class="image-center">
+                    <img src="style/snapinspect-web-ios-android.png" alt="sistemas compatíveis">
+                </div>
             </section>
 
-            <section>
+            <section class="info">
                 <h2>O que é o Aplicativo Alerta Auto Care?</h2>
                 <p>O Aplicativo Alerta Auto Care é uma maneira eficiente de capturar dados e agilizar seus processos de trabalho. Adicione a placa de registro do veículo, a assinatura do inspetor, as tarefas de manutenção do carro e muito mais! Uma das opções permite adicionar fotos para que você possa mostrar onde os danos estão localizados. O Gerador de Formulários da MoreApp permite que você tenha controle total sobre o aplicativo de vistorias veiculares, pois você pode personalizar o aplicativo de acordo com suas necessidades.</p>
-                <img src="style/vistoria.png" alt="imagem do aplicativo">
-                <img src="style/icons.png" alt="icons do app">
-                <img src="style/alertcar.png" alt="app funcionando">
+                <div class="app-images">
+                    <img src="style/vistoria.png" alt="imagem do aplicativo">
+                    <img src="style/icons.png" alt="icons do app">
+                    <img src="style/alertcar.png" alt="app funcionando">
+                </div>
             </section>
         </main>
 
@@ -45,5 +58,14 @@
             <p>Projeto Criado por Alisson Paixão, Ícaro Santos, Yan da Silva</p>
         </footer>
     </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", function () {
+            const navList = document.querySelector(".nav-list");
+            navList.classList.toggle("active");
+        });
+    </script>
 </body>
+
 </html>
